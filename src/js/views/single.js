@@ -3,6 +3,15 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
+/**
+ * 1. Recuperar la parte dinámica del elemento que queremos recuperar de la API
+ * 2. Hacer una nueva llamada a la API para que nos de información detallada de lo que sea que queremos detalles /vehicles/232
+ * 3. Rellenar toda la información en el componente adecuadamente
+ * 4. Claves:
+ *   1. Usar bien useState, useEffect
+ *   2. REcuperar bien los parámetros dinámicos con useParams()
+ */
+
 export const Single = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
